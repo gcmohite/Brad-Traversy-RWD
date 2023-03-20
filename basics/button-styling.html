@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Link States and Button Styling</title>
+    <style>
+      *,
+      *::before,
+      *::after,
+      html {
+        box-sizing: border-box;
+        /* margin: 0; */
+        /* padding: 0; */
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.4em;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      a:link,
+      a:visited {
+        color: darkgray;
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+        color: green;
+      }
+
+      a:active,
+      a:focus {
+        color: turquoise;
+      }
+
+      /* Button Styling */
+      .btn {
+        background-color: #4c6ca0;
+        color: rgb(243, 243, 243);
+        border: none;
+        padding: 1em;
+        border-radius: 5px;
+        font-size: 1.1em;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #446190;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="btn">My Button</button>
+    <br /><br />
+    <a href="#">My Link</a>
+  </body>
+</html>
