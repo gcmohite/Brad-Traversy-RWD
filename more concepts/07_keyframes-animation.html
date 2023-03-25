@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyframe Animations</title>
+    <style>
+      body {
+        background: #333;
+      }
+      .box {
+        height: 200px;
+        width: 200px;
+        background: white;
+        position: relative;
+        /* animation-name: animate1;
+        animation-duration: 0.4s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+        animation-direction: alternate;
+        animation-timing-function: cubic-bezier(1, 0, 0, 1); */
+        animation: animate1 0.8s alternate forwards;
+      }
+
+      @keyframes animate1 {
+        from {
+          width: 0px;
+          height: 0px;
+          /* top: 0; */
+          /* margin: 0 auto; */
+        }
+
+        to {
+          width: 70%;
+          height: 200px;
+          background-color: turquoise;
+          top: 200px;
+          /* margin: 0 auto; */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>
