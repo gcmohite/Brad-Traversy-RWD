@@ -1,0 +1,77 @@
+:root {
+  --primary-color: rgba(13, 110, 139, 0.75);
+  --secondary-color: rgba(229, 148, 0, 0.9);
+  --overlay-color: rgba(6, 8, 10, 0.95);
+  --menu-speed: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 3rem;
+}
+
+#showcase {
+  background: var(--primary-color);
+  color: #fff;
+  height: 100vh;
+
+  /* because we will use :before pseudoselector to add orverlay */
+  position: relative;
+}
+
+#showcase::before {
+  content: '';
+  background: url('../img/showcase.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#showcase .showcase-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#showcase h1 {
+  font-size: 4rem;
+}
+
+#showcase p {
+  font-size: 1.3rem;
+}
+
+.btn {
+  display: inline-block;
+  border: 0;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  background-color: var(--overlay-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: opacity 0.2s ease-out;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
